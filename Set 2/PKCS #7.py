@@ -1,7 +1,7 @@
-block = "YELLOW SUBMARINE"
-ps = 20
+block = b'YELLOW SUBMARINE'
+BS = 20
 l = len(block)
-p = ps - l%ps
-for a in range(p):
-    block = block + "\\x{:02x}".format(p) 
-print(block)
+ps = BS - l%BS
+if ps==0: ps = BS
+p = (chr(ps)*ps).encode()
+print(block+p)
