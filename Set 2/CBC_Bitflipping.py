@@ -92,6 +92,6 @@ def brk():
 
 
 BS = 16
-key = b'YELLOW SUBMARINE'
+key = Random.get_random_bytes(16)
 IV = Random.get_random_bytes(BS)
 brk()
